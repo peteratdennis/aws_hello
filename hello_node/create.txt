@@ -1,0 +1,1 @@
+aws lambda create-function --role AWSLambdaBasicExecutionRole --function-name hello_node --handler handler --runtime nodejs --zip-file fileb://index.zip
