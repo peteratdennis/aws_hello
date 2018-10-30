@@ -1,1 +1,3 @@
-aws lambda create-function --role AWSLambdaBasicExecutionRole --function-name hello_node --handler handler --runtime nodejs --zip-file fileb://index.zip
+aws lambda create-function --role arn:aws:iam::<NUMBERS>:role/service-role/<ROLE>  --function-name hello_node --handler index.handler --runtime nodejs8.10 --zip-file fileb://index.zip
+
+aws apigateway import-rest-api --parameters endpointConfigurationTypes=REGIONAL --body 'file://openapi/Hello_World-dev-oas30.yaml'
